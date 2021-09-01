@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --clr-primary-moderateViolet: hsl(263, 55%, 52%);
+  --clr-primary-grayishBlue: hsl(217, 19%, 35%);
+  --clr-primary-blackinshBlue: hsl(219, 29%, 14%);
+  --clr-primary-white: hsl(0, 0, 100%);
+  --clr-neutral-gray: hsl(0, 0%, 81%);
+  --clr-neutral-grayishBlue: hsl(210, 46%, 95%);
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 500;
+  background-color: var(--clr-neutral-grayishBlue);
+}
+
+.testimonials {
+  margin: 5rem 1.56rem;
+}
+
+.testimonial-1,
+.testimonial-2,
+.testimonial-3,
+.testimonial-4,
+.testimonial-5 {
+  padding: 1.2rem 2rem;
+  border-radius: 10px;
+  max-width: 60rem;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+}
+
+.testimonial-1,
+.testimonial-2,
+.testimonial-4 {
+  color: var(--clr-neutral-grayishBlue);
+}
+
+.testimonial-3,
+.testimonial-5 {
+  color: var(--clr-primary-grayishBlue);
+}
+
+.testimonial-1 .testimonial-text,
+.testimonial-2 .testimonial-text,
+.testimonial-3 .testimonial-text,
+.testimonial-4 .testimonial-text,
+.testimonial-5 .testimonial-text {
+  opacity: 75%;
+}
+
+.testimonial-1 .status,
+.testimonial-2 .status,
+.testimonial-3 .status,
+.testimonial-4 .status,
+.testimonial-5 .status {
+  opacity: 50%;
+}
+
+.testimonial-highlight {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.testimonial-1 {
+  position: relative;
+  background-color: var(--clr-primary-moderateViolet);
+}
+
+.testimonial-1::before {
+  content: '';
+  background: url('./images/bg-pattern-quotation.svg') no-repeat;
+  position: absolute;
+  top: 0;
+  right: 23px;
+  width: 104px;
+  height: 102px;
+}
+
+.testimonial-1 .testimonial-highlight {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-2 {
+  background-color: var(--clr-primary-grayishBlue);
+}
+
+.testimonial-3 {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.testimonial-4 {
+  background-color: var(--clr-primary-blackinshBlue);
+}
+
+.testimonial-5 {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.testimonial-image {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-weight: 600;
+  line-height: 1;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 2.8rem;
+  max-height: 2.8rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .testimonials {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-rows: 19.2rem 17.6rem;
+    grid-template-columns: repeat(4, 16rem);
+    grid-gap: 1.5rem;
+    margin: 0;
+  }
+  .testimonial-1 {
+    grid-row: 1;
+    grid-column: 1 / 3;
+    margin-bottom: 0;
+  }
+
+  .testimonial-1::before {
+    content: '';
+    background: url('./images/bg-pattern-quotation.svg') no-repeat;
+    position: absolute;
+    top: 0;
+    right: 80px;
+    width: 104px;
+    height: 102px;
+  }
+  .testimonial-2 {
+    grid-row: 1;
+    margin-bottom: 0;
+  }
+  .testimonial-3 {
+    grid-row: 2/3;
+    margin-bottom: 0;
+  }
+  .testimonial-4 {
+    grid-row: 2/3;
+    grid-column: 2/4;
+    margin-bottom: 0;
+  }
+  .testimonial-5 {
+    grid-row: 1/3;
+    grid-column: 4/5;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
